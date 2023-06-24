@@ -39,3 +39,17 @@ Różnice:
 
 ## Implementacja wątków w przestrzeni użytkownika
 To tworzenie i zarządzanie wątkami bezpośrednio przez aplikacje, bez udziału systemu. Jest szybsza i bardziej elastyczna, ale nie korzysta z zalet współdzielenia zasobów między procesami.
+
+## Wątki w jądrze
+Są zarządzane przez system, umożliwiają równoległe wykonanie na wielu procesorach i współdzielenie zasobów.
+Przełączanie kontekstu między nimi jest kosztowne, ale zapewnia większą wydajność i skalowalność aplikacji.
+
+## Komunikacja procesów
+Procesy w systemie komunikują się za pomocą mechanizmów IPC, takich jak kolejki komunikatów, potoki, gniazda sieciowe, pamięć współdzielona i semafory. Dzięki nim mogą wymieniać dane i synchronizować swoje działania.
+
+## Muteksy
+Zwane również jako blokady, są mechanizmem synchronizacji używanym w systemach i programowaniu wielowątkowym. Służą do zapewnienia, że tylko jeden wątek może równocześnie korzystać z chronionego zasobu.
+
+## Szeregowanie
+Występuje w systemie i dotyczy wyboru i przydziału zasobów, takich jak procesor, pamięć lub urządzenia dla różnych zadań. Obejmuje zarówno procesów jak i wątków i ma na celu efektywne wykorzystanie zasobów, minimalizacje czasu oczekiwania i równomierne rozłożenie obciążenia.
+
