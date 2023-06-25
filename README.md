@@ -77,7 +77,7 @@ Polega na przydzielaniu czasu procesora dla różnych wątków. Ma na celu efekt
 
 3. Stronicowanie: W tym modelu pamięć jest podzielona na równe bloki zwane stronami. Zarówno system, jak i proces użytkownika używają tego samego mechanizmu stronicowania. Strony są ładowane do pamięci w momencie potrzeby, a niecałe programy lub dane są ładowane na raz.
 
-## Pamięć wirtulna
+## Pamięć wirtualna
 To technika, która pozwala programom korzystać z większej ilości pamięci niż jest dostępna fizycznie. Tworzy wirtualne adresowanie, które jest mapowane na fizyczną pamięć. Umożliwia efektywne wykorzystanie pamięci poprzez wymianę stron między pamięcią fizyczną, a pamięcią masową.
 
 ## Sposoby zarządzania wolną pamięcią
