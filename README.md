@@ -76,3 +76,36 @@ Polega na przydzielaniu czasu procesora dla różnych wątków. Ma na celu efekt
 2. Segmentacja: W tym modelu pamięć jest podzielona na segmenty, które mogą być przydzielone zarówno dla systemu, jak i dla procesu użytkownika. Każdy segment ma określony rozmiar i zawiera określony obszar danych lub kodu.
 
 3. Stronicowanie: W tym modelu pamięć jest podzielona na równe bloki zwane stronami. Zarówno system, jak i proces użytkownika używają tego samego mechanizmu stronicowania. Strony są ładowane do pamięci w momencie potrzeby, a niecałe programy lub dane są ładowane na raz.
+
+## Pamięć wirtulna
+To technika, która pozwala programom korzystać z większej ilości pamięci niż jest dostępna fizycznie. Tworzy wirtualne adresowanie, które jest mapowane na fizyczną pamięć. Umożliwia efektywne wykorzystanie pamięci poprzez wymianę stron między pamięcią fizyczną, a pamięcią masową.
+
+## Sposoby zarządzania wolną pamięcią
+- Lista wolnych bloków
+- Bitowa mapa pamięci
+- Algorytmy alokacji pamięci (First-Fit, Best-Fit, Worst-Fit)
+- Fragmentacja pamięci
+
+## Stronicowanie
+To technika zarządzania pamięcią w systemach operacyjnych, w której pamięć jest podzielona na równe bloki o stałej wielkości zwane stronami. Procesy są również dzielone na bloki o tej samej wielkości, zwane stronami procesu.
+
+Stronicowanie polega na mapowaniu stron procesu na strony pamięci fizycznej. Gdy proces potrzebuje dostępu do konkretnej strony, system przekształca wirtualny adres strony na fizyczny adres, co umożliwia odwołanie się do odpowiedniego miejsca w pamięci fizycznej.
+
+## Algorytmy zastępowania stron
+Są stosowane w systemach do zarządzania pamięcią wirtualną. Głównym zadaniem tych algorytmów jest decyzja, które strony powinny być przeniesione z pamięci operacyjnej (RAM) do pamięci podręcznej np. dysku w przypadku braku miejsca w pamięci RAM dla nowych stron.
+
+- First-In First-Out - W tym algorytmie przenoszona jest strona, która została załadowana do pamięci operacyjnej jako pierwsza. Oznacza to, że najstarsza strona zostaje zastąpiona, niezależnie od jej użyteczności.
+
+- Least Recently Used - Algorytm opiera się na założeniu, że strony, które nie były używane od najdłuższego czasu, są najmniej przydatne. Przy zapełnieniu pamięci RAM, zostaje przeniesiona strona, która była używana najdawniej
+
+- Least Frequently Used - W tym algorytmie strona, która była używana najrzadziej, jest przenoszona z pamięci RAM. Algorytm ten opiera się na założeniu, że strony. które są używane rzadziej, sa mniej przydatne i mogą zostać usunięte.
+
+- Optimal - Ten teoretyczny algorytm dokonuje optymalnego wyboru strony do zastąpienia. Analizuje przyszłe odwołania do stron i usuwą tę, która będzie najdłużej nieużywana. Jest trudny do zaimplementowania, ponieważ wymaga znajomości przyszłych odwołań.
+
+## Segmentacja
+To techniki zarządzania pamięcią wirtualną. w której programy są podzielone na logiczne jednostki zwane segmentami. Każdy segment reprezentuje blok programu, taki jak kod, dane, stos czy stos zwrotny. Segmentacja pozwala na elastyczne przydzielanie pamięci programom, które mają zmienne rozmiary lub wymagają dynamicznego rozszerzenia swojej pamięci.
+
+- Segmentacja kodu
+- Segmentacja danych
+- Segmentacja stosu
+- Segmentacja plików
