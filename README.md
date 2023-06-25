@@ -53,3 +53,26 @@ Zwane również jako blokady, są mechanizmem synchronizacji używanym w systema
 ## Szeregowanie
 Występuje w systemie i dotyczy wyboru i przydziału zasobów, takich jak procesor, pamięć lub urządzenia dla różnych zadań. Obejmuje zarówno procesów jak i wątków i ma na celu efektywne wykorzystanie zasobów, minimalizacje czasu oczekiwania i równomierne rozłożenie obciążenia.
 
+## Kategorie algorytmów szeregowania procesów
+1.  Algorytmy szeregowania wsadowego: Stosowane w systemach wsadowych, gdzie zadania są zgłaszane jako paczki (wsady) i wykonywane w sposób nieinteraktywny. Celem jest maksymalne wykorzystanie zasobów i efektywne przetwarzanie dużych ilości zadań
+
+2. Algorytmy szeregowania interaktywnego: Stosowane w systemach interaktywnych, gdzie priorytetem jest odpowiedź systemu na żądania użytkownika w czasie rzeczywistym. Te algorytmy skupiają się na minimalizacji czasu oczekiwania i zapewnieniu płynności działania interakcji użytkownika z systemem
+
+3. Algorytmy szeregowania w systemach czasu rzeczywistego: Zastosowanie w systemach. gdzie wymagane jest spełnienie określonych ograniczeń czasowych. Priorytetem jest zapewnienie, że zadania czasu rzeczywistego są obsługiwane zgodnie z ich wymaganiami czasowymi, aby uniknąć nieakceptowalnego opóźnienia lub niepowodzenia
+
+## Szeregowanie wątków
+Polega na przydzielaniu czasu procesora dla różnych wątków. Ma na celu efektywne wykorzystanie zasobów, równomierne rozłożenie obciążenia i minimalizacje czasu oczekiwania. Istnieje wiele algorytmów szeregowania wątków, a priorytety wątków wpływają na ich kolejność wykonania.
+
+- First-Come First-Served: Wątki są wykonywane w kolejności, w jakiej zostały zgłoszone. Pierwszy wątek, który przybył, jest pierwszy na liście do wykonania. Nie uwzględnia czasu trwania wątków.
+
+- Shortest Job First: Wybiera się wątek o najkrótszym czasie wykonania spośród dostępnych wątków. Celem jest minimalizacja czasu oczekiwania. Wymaga informacji o długości czasu trwania wątków.
+
+- Shortest Remaining Time Next: Podobny do SJF, ale o najkrótszym pozostałym czasie wykonania ma pierwszeństwo. Jeśli przybywa wątek o krótszym czasie wykonania, może zastąpić aktualnie wykonywany wątek.
+
+## Sposoby organizacji pamięci z systemem operacyjnym  i jednym procesem użytkownika
+
+1. Monolityczny model organizacji pamięci: W tym modelu cała pamięć jest jednym blokiem, który jest dzielony między system, a proces użytkownika. System zajmuje pewien obszar pamięci dla swoich zadań, a reszta pamięci przeznaczona jest dla użytkownika.
+
+2. Segmentacja: W tym modelu pamięć jest podzielona na segmenty, które mogą być przydzielone zarówno dla systemu, jak i dla procesu użytkownika. Każdy segment ma określony rozmiar i zawiera określony obszar danych lub kodu.
+
+3. Stronicowanie: W tym modelu pamięć jest podzielona na równe bloki zwane stronami. Zarówno system, jak i proces użytkownika używają tego samego mechanizmu stronicowania. Strony są ładowane do pamięci w momencie potrzeby, a niecałe programy lub dane są ładowane na raz.
